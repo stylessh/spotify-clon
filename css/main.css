@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainfont: 'Poppins', Helvetica, Arial, sans-serif;
+    --green: #1DB954;
+}
+
+body {
+    font-family: var(--mainfont);
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.navbar a {
+    font-size: .9em;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: var(--green) !important;
+}
+
+.navbar .other-pages {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-right: 20px;
+}
+
+.navbar .other-pages a {
+    color: #fff;
+}
+
+.navbar .login {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.navbar .login a {
+    color: #D9DADC;
+}
+
+.navbar .login a:first-child {
+    border-left: 1px solid #fff;
+    padding-left: 25px;
+}
+
+.toggle-btn {
+    display: none;
+}
+
+.close-btn {
+    display: none;
+}
+
+/* HERO SECTION */
+
+.hero {
+    background: rgb(244,117,123);
+    background: linear-gradient(180deg, rgba(244,117,123,1) 0%, rgba(245,136,110,1) 100%);
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 4em;
+}
+
+.hero p {
+    padding: 10px 0;
+    font-size: 1.2em;
+}
+
+.hero .btn {
+    text-decoration: none;
+    color: #fff;
+    background: var(--green);
+    padding: 16px 48px;
+    border-radius: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .8em;
+    letter-spacing: 3px;
+    transition: all .20s;
+}
+
+.hero .btn:hover {
+    background: #1ED760;
+}
+
+/* PREMIUM SECTION */
+
+.premium {
+    background: #498172;
+    width: 90%;
+    margin: 50px auto;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.premium h3 {
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 5px 0;
+    font-size: 1.3em;
+}
+
+.premium .btn {
+    text-decoration: none;
+    background: #FFCDD2;
+    color: #498172;
+    padding: 10px 48px;
+    border-radius: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin: 15px 0;
+}
+
+.premium .small {
+    font-size: .7em;
+}
+
+/* FOOTER SECTION */
+
+.footer {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    overflow-y: hidden;
+}
+
+.footer .grid-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+    width: 90%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.footer .grid-5 h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9em;
+    color: #919496;
+    text-transform: uppercase;
+}
+
+.footer .grid-5 a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 0;
+}
+
+.footer .grid-5 a:hover {
+    color: var(--green);
+}
+
+.footer .grid-5 .media {
+    text-align: right;
+}
+
+.footer .grid-5 .media a {
+    display: inline-block;
+    font-size: 1.5em;
+    background: #222326;
+    padding: 8px 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+
+.footer .legal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.footer .legal .links {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.footer .legal a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #919496;
+    text-decoration: none;
+    font-size: .75em;
+}
+
+.footer .legal a:hover {
+    color: var(--green);
+}
+
+.footer .legal .other {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #919496;
+    font-size: .75em;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+    /* HEADER */
+
+    .header {
+        justify-content: space-between;
+        background: #000;
+        z-index: 9999;
+        font-size: .7em;
+    }
+
+    .header .toggle-btn {
+        display: block;
+        font-size: 1.9em;
+    }
+
+    .header .toggle-btn i {
+        z-index: 1000;
+    }
+
+    .header .navbar {
+        display: block;
+        background: #000;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        z-index: 999;
+        width: 80%;
+        text-align: left;
+        padding-left: 30px;
+        padding-top: 40px;
+        opacity: 0;
+        transition: all .30s;
+    }
+
+    .header .navbar.active {
+        right: 0;
+        opacity: 1;
+        filter: drop-shadow(-250px 0px 0px rgba(0,0,0,.4));
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        display: block;
+        font-size: 2em;
+    }
+
+    .header .navbar .other-pages,
+    .header .navbar .login {
+        display: block;
+        text-align: left;
+    }
+
+    .header .navbar .other-pages a {
+        display: block;
+        font-size: 2.5em;
+        padding: 9px 0;
+    }
+
+    .header .navbar .login a {
+        display: block;
+        border: none;
+        padding: 0;
+        font-size: 1.6em;
+    }
+
+    .header .navbar .login a:first-child {
+        border-top: 1px solid #919496;
+        padding: 10px 0;
+    }
+
+
+    /* HERO SECTION */
+
+    .hero {
+        text-align: center;
+        height: 100vh;
+    }
+
+    .hero h2 {
+        font-size: 3em;
+    }
+
+    /* PREMIUM SECTION */
+
+    .premium {
+        text-align: center;
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    /* FOOTER */
+
+    .footer .grid-5 { 
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+
+    .footer .grid-5 .logo {
+        grid-column: 1 / 3;
+        padding: 10px 0;
+    }
+
+    .footer .grid-5 .media {
+        text-align: center;
+        grid-column: 1 / 3;
+        padding: 10px 0;
+    }
+
+    .footer .legal {
+        display: block;
+        text-align: center;
+    }
+
+    .footer .legal .links {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
